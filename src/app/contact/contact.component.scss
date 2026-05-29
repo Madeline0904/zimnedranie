@@ -1,0 +1,191 @@
+@use "../../colors" as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+  }
+  &__hero {
+    display: block;
+    width: 100%;
+    height: 100%;
+ 
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0.9764705882);
+    color: rgba(5, 5, 5, 0.996);
+
+    &-number {
+      margin: 2em;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      height: 150px;
+      width: 400px;
+
+      &-adress,
+      &-phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+      }
+      i {
+        font-size: 1em;
+        margin: 0.5em;
+        transition: color, scale 0.3s;
+      }
+      i:hover {
+        color: $mainColor;
+        scale: 1.2;
+      }
+
+      .phoneNumber {
+
+        text-decoration: none;
+        color: $heroBg;
+        font-size: 1.5rem;
+      }
+      .adress {
+        line-height: 2em;
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+       
+      }
+    
+    }
+  }
+  &__map {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+  .adress-link {
+    text-decoration: none;
+    color: $heroBg;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 50px;
+  width: 100%;
+  height: 5%;
+  margin-bottom: 0;
+  .footer-box{
+width: 100%;
+    .footer-text {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50%;
+padding: 1em;
+      font-size: 1rem;
+      background-color: $mainColor;
+      width: 100%;
+      letter-spacing: 1.5px;
+      color: $secondColor;
+      a{
+        text-decoration: none;
+        color: $secondColor;
+        font-weight: 600;
+      }
+    }
+  }
+  
+}
+
+//media
+
+@media (min-width: 972px) {
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    height: 100vh;
+    overflow: hidden;
+    &__container {
+      height: 100%;
+      margin-top: 0;
+      width: 50%;
+    }
+    &__hero {
+      display: block;
+      width: 50%;
+      height: 100vh;
+    
+      background-position: center;
+      background-size: cover;
+    }
+    &__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 95%;
+      background-color: $secondColor;
+      color: $heroBg;
+
+      &-number {
+        display: flex;
+        width: 500px;
+    
+
+        &-adress,
+        &-phone {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1em;
+        }
+        i {
+          font-size: 2em;
+          margin: 0.5em;
+          transition: color, scale 0.3s;
+        }
+        i:hover {
+          color: $mainColor;
+          scale: 1.2;
+        }
+
+        .phoneNumber {
+          margin-bottom: 0.5em;
+          text-decoration: none;
+          color: $heroBg;
+          font-size: 2rem;
+        }
+        .adress {
+          line-height: 2em;
+          letter-spacing: 1px;
+          font-size: 2rem;
+        }
+      }
+    }
+   .footer{
+    .footer-box{
+      .footer-text{
+        font-size: 1.2rem;
+      }
+    }
+   }
+  }
+ 
+}

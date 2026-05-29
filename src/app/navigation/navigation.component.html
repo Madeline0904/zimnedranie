@@ -1,0 +1,30 @@
+<nav class="navbar">
+    <button class="navbar__btn" id="sidebarToggle" (click)="toggleField()">
+        <div class="navbar__btn__box">
+            <div class="navbar__btn__bars">
+                <div class="navbar__btn__bars-firstLine" [class.firstLineRotate]="firstLineRotate"
+                    ></div>
+                <div class="navbar__btn__bars-secondLine" [class.secondLineRotate]="secondLineRotate"
+                   ></div>
+            </div>
+        </div>
+    </button>
+
+    <div [class]="navItemClass" class="navbar__container" [class.navbar_container_active]="navbarContainerActive">
+        <div class="navbar__nav">
+            <a *ngFor="let navItem of navList" class="navbar__nav-link" [routerLink]="[navItem.location]"
+                (click)="hideMenu()">
+                <div class="navbar__nav-link-box">
+                    <i (mouseenter)="onMouseEnter($event)" [attr.data-dstid]="navItem.name"
+                        (mouseleave)="onMouseleave($event)" [attr.data-dstid]="navItem.name"
+                        [ngClass]="getIconClass(navItem)"></i>
+                </div>
+            </a>
+        </div>
+
+        <div class="navbar__nav-hover">
+            <a *ngFor="let navItem of navList" class="navbar__nav-hover-link" [routerLink]="[navItem.location]"
+                (click)="hideMenu()" id="{{ navItem.name }}">{{ navItem.name }}</a>
+        </div>
+    </div>
+</nav>

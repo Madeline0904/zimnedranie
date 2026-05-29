@@ -1,0 +1,206 @@
+.gallery-title__main {
+  text-align: left;
+  text-transform: uppercase;
+  margin-left: -0.1em;
+  margin-bottom: -57px;
+  font-weight: 700;
+  font-size: 24.8rem;
+  letter-spacing: 2px;
+  color: rgba(57, 65, 60, 0.559);
+  overflow: hidden;
+}
+
+:host {
+  display: block;
+  text-align: center;
+}
+
+.lightbox .lightbox-img {
+  height: 70%;
+}
+
+.lightbox .lightbox-img img {
+  height: 100%;
+}
+
+.gallery-lightbox-container {
+  position: relative;
+  display: inline-block;
+  padding: 25px;
+  background-color: #044a42;
+}
+.gallery-lightbox-container .lightbox .lightbox-img img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  max-height: 100%;
+}
+.gallery-lightbox-container .gallery {
+  margin-top: 6em;
+  line-height: 0;
+  -moz-column-count: 3;
+       column-count: 3;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.gallery-lightbox-container .gallery .gallery-img img {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.21);
+}
+.gallery-lightbox-container .lightbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1002;
+}
+.gallery-lightbox-container .lightbox .count {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7%;
+  height: 10%;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 18px;
+  margin-left: 5px;
+}
+.gallery-lightbox-container .lightbox .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.9764705882);
+  background: 0 0;
+  border: none;
+  cursor: pointer;
+  width: 7%;
+  height: 10%;
+  z-index: 1002;
+}
+.gallery-lightbox-container .lightbox .close-btn .fa-xmark {
+  font-size: 25px;
+}
+.gallery-lightbox-container .lightbox .btn-lightbox-carusel {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  height: 8%;
+  width: 8%;
+  color: rgba(255, 255, 255, 0.9764705882);
+  border: 0;
+  background: 0 0;
+  cursor: pointer;
+}
+.gallery-lightbox-container .lightbox .btn-prev {
+  left: 0;
+}
+.gallery-lightbox-container .lightbox .btn-next {
+  right: 0;
+}
+.gallery-lightbox-container .lightbox .icon-lightbox-carusel {
+  color: #044a42;
+  opacity: 0.5;
+  transition: all 0.15s ease;
+}
+.gallery-lightbox-container .lightbox .icon-lightbox-carusel:hover {
+  opacity: 0.9;
+}
+.gallery-lightbox-container .lightbox .icon-lightbox-carusel:active {
+  opacity: 0.5;
+}
+.gallery-lightbox-container .lightbox .icon-prev,
+.gallery-lightbox-container .lightbox .icon-next {
+  font-size: 30px;
+}
+.gallery-lightbox-container .lightbox .lightbox-img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 555px) {
+  .gallery-title {
+    display: none;
+  }
+}
+@media screen and (min-width: 556px) {
+  .gallery-title {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .gallery-title__main {
+    margin-bottom: -29px;
+    font-size: 11.8rem;
+  }
+  .gallery-lightbox-container .gallery {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+  .gallery-lightbox-container .gallery .gallery-img img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 651px) {
+  .gallery-title__main {
+    margin-bottom: -32px;
+    font-size: 13.8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery-title__main {
+    margin-bottom: -40px;
+    font-size: 16.8rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .gallery-lightbox-container .gallery {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+  .gallery-lightbox-container .gallery .gallery-img img {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .gallery-title__main {
+    margin-bottom: -51px;
+    font-size: 21.8rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .gallery-lightbox-container .lightbox .lightbox-img img {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .gallery-lightbox-container .gallery {
+    -moz-column-count: 2;
+         column-count: 2;
+    width: 100%;
+  }
+  .gallery-lightbox-container .gallery .gallery-img img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-title__main {
+    margin-bottom: -58px;
+    font-size: 24.8rem;
+  }
+}/*# sourceMappingURL=gallery.component.css.map */

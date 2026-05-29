@@ -1,0 +1,139 @@
+.portfolio {
+  background-color: #044a42;
+  overflow: hidden;
+}
+
+.portfolio-title-main {
+  text-transform: uppercase;
+  margin-left: -0.1em;
+  height: 178px;
+  font-weight: 700;
+  font-size: 30rem;
+  letter-spacing: 2px;
+  color: rgba(57, 65, 60, 0.559);
+  background-color: rgba(255, 255, 255, 0.9764705882);
+}
+
+.cards-box {
+  margin-top: 5em;
+}
+.cards-box .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cards-box .cards__card {
+  margin: 1em;
+  position: relative;
+  width: 365px;
+  height: 365px;
+  perspective: 800px;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+.cards-box .cards__card-after, .cards-box .cards__card-before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.cards-box .cards__card-after {
+  background-image: url("../../assets/img/after1.jpg");
+  z-index: 1;
+}
+.cards-box .cards__card-before {
+  background-image: url("../../assets/img/before1.jpg");
+}
+.cards-box .cards__card .after-two-img {
+  background-image: url("../../assets/img/after2.jpg");
+}
+.cards-box .cards__card .before-two-img {
+  background-image: url("../../assets/img/before2.jpg");
+}
+.cards-box .cards__card .after-three-img {
+  background-image: url("../../assets/img/after3.jpg");
+}
+.cards-box .cards__card .before-three-img {
+  background-image: url("../../assets/img/before3.jpg");
+}
+.cards-box .cards__card .after-four-img {
+  background-image: url("../../assets/img/after4.jpg");
+}
+.cards-box .cards__card .before-four-img {
+  background-image: url("../../assets/img/before4.jpg");
+}
+.cards-box .cards__card .after-five-img {
+  background-image: url("../../assets/img/after5.jpg");
+}
+.cards-box .cards__card .before-five-img {
+  background-image: url("../../assets/img/before5.jpg");
+}
+.cards-box .cards__card .after-six-img {
+  background-image: url("../../assets/img/after6.jpg");
+}
+.cards-box .cards__card .before-six-img {
+  background-image: url("../../assets/img/before6.jpg");
+}
+.cards-box .cards__card .after-seven-img {
+  background-image: url("../../assets/img/after7.png");
+}
+.cards-box .cards__card .before-seven-img {
+  background-image: url("../../assets/img/before7.png");
+}
+.cards-box .cards .moreBtn {
+  height: 100%;
+}
+
+.clickedAfter {
+  transform: rotate(0);
+  opacity: 0;
+  animation: up 0.8s;
+}
+
+.clickedBefore {
+  animation: down 0.8s;
+}
+
+@media (max-width: 576px) {
+  .portfolio-title-main {
+    display: none;
+  }
+}
+@media (min-width: 577px) {
+  .portfolio-title-main {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .portfolio-title-main {
+    display: block;
+    padding-top: 36px;
+    font-size: 12.5rem;
+    height: 150px;
+  }
+}
+@media (min-width: 992px) {
+  .portfolio-title-main {
+    padding-top: 42px;
+    font-size: 16rem;
+    height: 187px;
+  }
+  .cards-box .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 50px;
+  }
+  .cards-box .cards__card {
+    width: 420px;
+    height: 420px;
+  }
+}
+@media (min-width: 1500px) {
+  .portfolio-title-main {
+    font-size: 20rem;
+    height: 222px;
+  }
+}/*# sourceMappingURL=portfolio.component.css.map */

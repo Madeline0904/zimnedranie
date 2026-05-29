@@ -1,0 +1,211 @@
+@use "../../colors" as *;
+
+.navbar__btn.white .navbar__btn__bars-firstLine {
+  color: $secondColor;
+}
+.white {
+  .navbar__nav-link-box {
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 85%);
+    color: $secondColor;
+  }
+  .navbar__nav-hover-link {
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 85%);
+    color: $secondColor;
+  }
+}
+
+.navbar__btn__bars-firstLine.whiteLines,
+.navbar__btn__bars-secondLine.whiteLines {
+  background-color: $secondColor;
+}
+.navbar__btn__bars-firstLine.blackLines:not(.firstLineRotate),
+.navbar__btn__bars-secondLine.blackLines:not(.secondLineRotate) {
+  background-color: $heroBg;
+}
+
+.navbar {
+  &__container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: margin-right 0.3s;
+    z-index: 100;
+  }
+  &__btn {
+    position: fixed;
+    top: 20px;
+    right: 5px;
+    padding: 1em;
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    z-index: 1000;
+    &__box {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      bottom: auto;
+      z-index: 120;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+    &__bars {
+      position: absolute;
+      width: 100%;
+      &-firstLine {
+        margin-bottom: 1em;
+      }
+      &-secondLine {
+        margin-top: 1em;
+      }
+      &-firstLine,
+      &-secondLine {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $secondColor;
+        border-radius: 20px;
+        position: absolute;
+        overflow: hidden;
+        transition: all 0.3s;
+      }
+      .firstLineRotate {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+          rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        margin-bottom: 0em;
+      }
+
+      .secondLineRotate {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+          rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        margin-top: 0em;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+
+    &-link {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: #fff;
+      i {
+        font-size: 1.3em;
+        transition: scale 0.3s;
+        &:hover {
+          scale: 1.2;
+        }
+      }
+    }
+  }
+  &__nav-hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+    &-link {
+      margin-left: 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      font-weight: 400;
+      color: $secondColor;
+      transition: scale 0.4s;
+      &:hover {
+        color: scale 1.2;
+      }
+    }
+  }
+}
+
+.navAnimation {
+  animation: navItemsAnimation 1s both;
+}
+.overflow {
+  overflow: hidden;
+}
+
+.navHoverAnimation {
+  animation: navHoverAnimation 1s both;
+}
+.navHoverAnimationIcon {
+  animation: navHoverAnimationIcon 1s both;
+}
+
+//media
+
+@media (max-width: 1399px) {
+  .navbar_container_active {
+    transform: translateX(0);
+    background-color: $heroBg;
+    margin-top: 0;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1400px) {
+  .nav-items-animation {
+    animation: navHoverAnimation 1s both;
+  }
+  .navbar__btn {
+    display: none;
+  }
+  .navbar {
+    &__container {
+      display: flex;
+      top: 11.3em;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      right: -9em;
+      width: 20%;
+      height: 50%;
+      transform: translateX(0);
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 400px;
+
+      &-link {
+        color: $heroBg;
+
+        &-box {
+          width: 200px;
+          text-align: left;
+          background-color: transparent;
+        }
+      }
+    }
+
+    &__nav-hover {
+      align-items: end;
+      &-link {
+        margin-right: 10px;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: $heroBg;
+        opacity: 0;
+        z-index: 0;
+      }
+    }
+  }
+}

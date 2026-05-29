@@ -1,0 +1,195 @@
+.navbar__btn.white .navbar__btn__bars-firstLine {
+  color: rgba(255, 255, 255, 0.9764705882);
+}
+
+.white .navbar__nav-link-box {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 0.9764705882);
+}
+.white .navbar__nav-hover-link {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 0.9764705882);
+}
+
+.navbar__btn__bars-firstLine.whiteLines,
+.navbar__btn__bars-secondLine.whiteLines {
+  background-color: rgba(255, 255, 255, 0.9764705882);
+}
+
+.navbar__btn__bars-firstLine.blackLines:not(.firstLineRotate),
+.navbar__btn__bars-secondLine.blackLines:not(.secondLineRotate) {
+  background-color: rgba(5, 5, 5, 0.996);
+}
+
+.navbar__container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: margin-right 0.3s;
+  z-index: 100;
+}
+.navbar__btn {
+  position: fixed;
+  top: 20px;
+  right: 5px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+.navbar__btn__box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  bottom: auto;
+  z-index: 120;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.navbar__btn__bars {
+  position: absolute;
+  width: 100%;
+}
+.navbar__btn__bars-firstLine {
+  margin-bottom: 1em;
+}
+.navbar__btn__bars-secondLine {
+  margin-top: 1em;
+}
+.navbar__btn__bars-firstLine, .navbar__btn__bars-secondLine {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.9764705882);
+  border-radius: 20px;
+  position: absolute;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.navbar__btn__bars .firstLineRotate {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  margin-bottom: 0em;
+}
+.navbar__btn__bars .secondLineRotate {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  margin-top: 0em;
+}
+.navbar__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 400px;
+}
+.navbar__nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #fff;
+}
+.navbar__nav-link i {
+  font-size: 1.3em;
+  transition: scale 0.3s;
+}
+.navbar__nav-link i:hover {
+  scale: 1.2;
+}
+.navbar__nav-hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 400px;
+}
+.navbar__nav-hover-link {
+  margin-left: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9764705882);
+  transition: scale 0.4s;
+}
+.navbar__nav-hover-link:hover {
+  color: scale 1.2;
+}
+
+.navAnimation {
+  animation: navItemsAnimation 1s both;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.navHoverAnimation {
+  animation: navHoverAnimation 1s both;
+}
+
+.navHoverAnimationIcon {
+  animation: navHoverAnimationIcon 1s both;
+}
+
+@media (max-width: 1399px) {
+  .navbar_container_active {
+    transform: translateX(0);
+    background-color: rgba(5, 5, 5, 0.996);
+    margin-top: 0;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1400px) {
+  .nav-items-animation {
+    animation: navHoverAnimation 1s both;
+  }
+  .navbar__btn {
+    display: none;
+  }
+  .navbar__container {
+    display: flex;
+    top: 11.3em;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    right: -9em;
+    width: 20%;
+    height: 50%;
+    transform: translateX(0);
+  }
+  .navbar__btn {
+    display: none;
+  }
+  .navbar__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+  }
+  .navbar__nav-link {
+    color: rgba(5, 5, 5, 0.996);
+  }
+  .navbar__nav-link-box {
+    width: 200px;
+    text-align: left;
+    background-color: transparent;
+  }
+  .navbar__nav-hover {
+    align-items: end;
+  }
+  .navbar__nav-hover-link {
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(5, 5, 5, 0.996);
+    opacity: 0;
+    z-index: 0;
+  }
+}/*# sourceMappingURL=navigation.component.css.map */

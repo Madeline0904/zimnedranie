@@ -1,0 +1,192 @@
+.reviews {
+  padding: 200px;
+  background-image: url("../../assets/img/4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.swiper {
+  height: 500px;
+}
+.swiper .swiper-slide {
+  color: rgba(255, 255, 255, 0.9764705882);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.swiper-slide-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+}
+.swiper-slide-box p {
+  line-height: 27px;
+  margin-bottom: 1.5em;
+}
+
+:root {
+  --swiper-navigation-size: 44px;
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, -36px);
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, -36px);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  display: block;
+}
+
+.pswp-gallery {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .reviews {
+    padding: 80px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  .swiper {
+    height: 300px;
+    width: 200px;
+  }
+  .swiper .swiper-slide {
+    color: rgba(255, 255, 255, 0.9764705882);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+  .swiper-slide-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+  .swiper-slide-box p {
+    line-height: 20px;
+    margin-bottom: 1.5em;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .quote {
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+  :root {
+    --swiper-navigation-size: 20px;
+  }
+  .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, -72px);
+  }
+  .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, -72px);
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .reviews {
+    padding: 100px;
+    background-image: url("../../assets/img/4.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  .swiper {
+    height: 300px;
+    width: 200px;
+  }
+  .swiper .swiper-slide {
+    color: rgba(255, 255, 255, 0.9764705882);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+  .swiper-slide-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+  }
+  .swiper-slide-box p {
+    line-height: 25px;
+    margin-bottom: 1.5em;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .quote {
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+  strong {
+    font-size: 1.5rem;
+  }
+  :root {
+    --swiper-navigation-size: 20px;
+  }
+  .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, -274px);
+  }
+  .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, -274px);
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .reviews {
+    padding: 350px;
+  }
+  .swiper-slide-box p {
+    line-height: 29px;
+    margin-bottom: 1.5em;
+    font-size: 1.9rem;
+    text-align: center;
+  }
+  .quote {
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+  strong {
+    font-size: 2rem;
+  }
+  :root {
+    --swiper-navigation-size: 44px;
+  }
+  .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, -350px);
+  }
+  .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, -350px);
+  }
+}/*# sourceMappingURL=reviews.component.css.map */
