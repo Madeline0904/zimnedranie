@@ -27,7 +27,6 @@ interface Item {
   template: `
     <main>
       <app-navigation></app-navigation>
-       <app-navigation></app-navigation>
       <section class="content" [@routeAnimations]="getRouteAnimationData()">
         <router-outlet></router-outlet>
       </section>

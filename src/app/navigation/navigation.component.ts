@@ -35,7 +35,7 @@ export class NavigationComponent implements OnInit {
 
   public navbarContainerActive = false;
   public overflow = false;
-  private allNavItems?: NodeListOf<HTMLElement>;
+  private allNavItems!: NodeListOf<HTMLElement>;
 
   navItemClass = '';
   navList: NavItem[] = [
@@ -51,7 +51,7 @@ export class NavigationComponent implements OnInit {
     {
       location: '/offers',
       name: 'oferta',
-      icon: 'fa-scissors',
+      icon: 'fa-ice-cream',
       iconSolid: true,
       iconBrands: false,
       iconColor: 'white',
@@ -59,27 +59,9 @@ export class NavigationComponent implements OnInit {
     },
     {
       location: '/portfolio',
-      name: 'portfolio',
+      name: 'o mnie',
       icon: 'fa-face-grin-hearts',
       iconSolid: false,
-      iconBrands: false,
-      iconColor: '',
-      btnColorLight: false,
-    },
-    {
-      location: '/reviews',
-      name: 'opinie',
-      icon: 'fa-comments',
-      iconSolid: false,
-      iconBrands: false,
-      iconColor: 'white',
-      btnColorLight: true,
-    },
-    {
-      location: '/gallery',
-      name: 'galeria',
-      icon: 'fa-image',
-      iconSolid: true,
       iconBrands: false,
       iconColor: '',
       btnColorLight: false,
@@ -92,26 +74,7 @@ export class NavigationComponent implements OnInit {
       iconBrands: false,
       iconColor: 'white',
       btnColorLight: false,
-    },
-
-    // {
-    // //   location: '/instagram',
-    // //   name: 'Instagram',
-    // //   icon: 'fa-instagram',
-    // //   iconSolid: true,
-    // //   iconBrands: true,
-    // //   iconColor: '',
-    // //   btnColorLight: false,
-    // // },
-    {
-      location: '/facebook',
-      name: 'Facebook',
-      icon: 'fa-square-facebook',
-      iconSolid: true,
-      iconBrands: true,
-      iconColor: 'white',
-      btnColorLight: false,
-    },
+    }
   ];
   private destroyed$ = new Subject();
 
@@ -197,19 +160,20 @@ export class NavigationComponent implements OnInit {
   }
   handleNavItemsAnimation() {
     let delayTime = 0;
-    this.allNavItems?.forEach((item) => {
+    for (const item of Array.from(this.allNavItems)) {
       item.classList.toggle('navHoverAnimation');
-      item.style.animationDelay = '.' + delayTime + 's';
-      delayTime++;
-    });
+      // item.style.animationDelay = '.' + delayTime + 's';
+      // delayTime++;
+    }
   }
   handleNavItemsAnimationIcon() {
-    let delayTime = 0;
+    let delayTime = 1;
 
-    this.allNavItems?.forEach((item) => {
+    for (const item of Array.from(this.allNavItems)) {
+      console.log(delayTime, item);
       item.classList.toggle('navHoverAnimationIcon');
       item.style.animationDelay = '.' + delayTime + 's';
       delayTime++;
-    });
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "cut-or-not",
+  "name": "zimnedranie",
   "version": "0.0.0",
-  "description": "CutOrNot",
+  "description": "ZimneDranie",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=https://cut-or-not.pl/ --cname=cut-or-not.pl"
+    "deploy": "ng deploy --base-href=https://madeline0904.github.io/zimnedranie/"
   },
   "private": true,
   "dependencies": {
