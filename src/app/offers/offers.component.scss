@@ -1,14 +1,17 @@
 @use "../../colors" as *;
 @use "../../mixins" as *;
 
-section.section-price {
-  position: relative;
-  height: 100vh;
-  width: 100%;
+body {
   background-image: url("../../assets/img/iceCream.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+section.section-price {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  
   z-index: 0;
 
   h1 {
@@ -85,7 +88,7 @@ section.section-price {
 
       &-title {
         margin-top: 5px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Raleway", sans-serif;
         font-weight: 300;
         font-size: 4rem;
         text-align: center;
@@ -322,7 +325,7 @@ section.section-price {
 
         &-title {
           margin-top: 5px;
-          font-family: "Montserrat", sans-serif;
+          font-family: "Raleway", sans-serif;
           font-weight: 300;
           font-size: 4rem;
           text-align: center;
