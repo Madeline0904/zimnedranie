@@ -66,6 +66,7 @@ section.section-price {
       .offers__card-info {
         transform: rotateY(0);
         opacity: 1;
+        pointer-events: auto;
       }
     }
     &-title {
@@ -100,6 +101,13 @@ section.section-price {
         }
       }
     }
+    &-col4 {
+      ul {
+        max-height: 420px;
+        overflow-y: auto;
+        width: 85%
+      }
+    }
     &-info {
       position: absolute;
       top: 0;
@@ -116,6 +124,7 @@ section.section-price {
       transition:
         transform 1s,
         opacity 1s;
+      pointer-events: none;
 
       ul {
         width: 70%;
@@ -277,7 +286,6 @@ section.section-price {
     }
     &__card {
       position: relative;
-      margin: 1em;
       height: 500px;
       width: 100%;
       color: $pure-white;
@@ -285,7 +293,7 @@ section.section-price {
       perspective: 1000px;
 
       &:hover {
-        //z-index: 10;
+        z-index: 10;
         .offers__card-bg {
           transform: rotateY(-180deg);
           opacity: 0;
@@ -308,9 +316,9 @@ section.section-price {
           transform 1s,
           opacity 1s;
         overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
         &-title {
           margin-top: 5px;
@@ -330,10 +338,7 @@ section.section-price {
           }
         }
       }
-      &-col4 {
-        width: 420%;
-        z-index: 9999;
-      }
+	  
       &-info {
         position: absolute;
         top: 0;
@@ -342,6 +347,7 @@ section.section-price {
         right: 0;
         display: flex;
         flex-direction: column;
+		
 
         background-image: $light-blue-gradient;
         border-radius: 8px;
@@ -391,6 +397,32 @@ section.section-price {
           }
         }
       }
+      &-col4 {
+			width: 420%;
+			ul {
+        width: 85%;
+				&::-webkit-scrollbar {
+					width: 8px;
+				}
+				&::-webkit-scrollbar-track {
+					background: rgba(255, 255, 255, 0.1);
+					border-radius: 10px;
+				}
+				&::-webkit-scrollbar-thumb {
+					background: rgba(255, 255, 255, 0.4);
+					border-radius: 10px;
+
+					&:hover {
+						background: rgba(255, 255, 255, 0.7);
+					}
+				}
+			}
+			ul li > div {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 10px;
+			}
+		}
     }
   }
 }

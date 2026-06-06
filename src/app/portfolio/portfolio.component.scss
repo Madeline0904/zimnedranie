@@ -2,11 +2,16 @@
 
 .portfolio{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.wrapper {
+  width: 100%;
 }
 .containerGrid{
     background-color: rgb(205 130 24 / 93%);
+    width: 100%;
 }
 .bgImg{
   display: none;
@@ -128,8 +133,9 @@ grid-area: 1 / 1 / 2 / 2;
  
   .portfolio{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
 }
   .mobileHero{
     display: none;
